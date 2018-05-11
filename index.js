@@ -23,7 +23,7 @@ function tick() {
 		} else if (seconds === FINAL_TIME_SECONDS) {
 			// beep twice
 			playBeep();
-			setTimeout(playBeep, 400);
+			setTimeout(playBeep, 500);
 		}
 
 		// update text
@@ -40,11 +40,14 @@ function endCurrentTimer() {
 	results.appendChild(div)
 }
 
+function startTimer() {
+	seconds = 0;
+	t = setTimeout(tick, 1000);
+}
+
 function nextPerson() {
 	endCurrentTimer();
-
-	seconds = 0;
-	tick();
+	startTimer();
 }
 
 function playBeep() {
@@ -53,7 +56,7 @@ function playBeep() {
 
 
 /* Start button */
-start.onclick = tick;
+start.onclick = startTimer;
 
 /* Stop button */
 stop.onclick = endCurrentTimer;
