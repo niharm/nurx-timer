@@ -1,0 +1,36 @@
+#time {
+  font-size: 15vh;
+  margin-bottom: 3vh;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+  background: #F1EAD2;
+  color: 333741;
+}
+
+.full-button {
+  width: 70vw;
+  height: 20vh;
+  font-size: 7vh;
+  font-family: 'Inconsolata', monospace;
+  color: 333741;
+}
+
+.green {
+  background: #33b699;
+}
+
+.yellow {
+  background: #F7BE48;
+}
+
+.red {
+  background: #D5574D;
+}
+
+#results {
+  margin-top: 5vh;
+  font-size: 3vh;
+}
