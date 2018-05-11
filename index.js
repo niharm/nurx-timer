@@ -3,7 +3,6 @@ const start = document.getElementById('start');
 const stop = document.getElementById('stop');
 const next = document.getElementById('next');
 const results = document.getElementById('results');
-const chimetest = document.getElementById('chimetest');
 
 // load sounds
 const chime = new Audio('sounds/chime.wav');
@@ -51,6 +50,11 @@ function playChime() {
 	chime.play();
 }
 
+function playGong() {
+	gong.play();
+}
+
+
 /* Start button */
 start.onclick = tick;
 
@@ -60,4 +64,8 @@ stop.onclick = endCurrentTimer;
 /* next person */
 next.onclick = nextPerson;
 
+// have to have sounds that start from user input before the device will allow sounds :/
+const chimetest = document.getElementById('chimetest');
+const gongtest = document.getElementById('gongtest');
+gongtest.onclick = playGong;
 chimetest.onclick = playChime;
