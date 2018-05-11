@@ -23,8 +23,8 @@ function tick() {
 		} else if (seconds === FINAL_TIME_SECONDS) {
 			// beep thrice
 			playBeep();
-			setTimeout(playBeep, 300);
-			setTimeout(playBeep, 600);
+			setTimeout(playBeep, 400);
+			setTimeout(playBeep, 800);
 		}
 
 		// update text
