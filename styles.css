@@ -16,6 +16,7 @@ body {
   font-size: 7vh;
   font-family: 'Inconsolata', monospace;
   color: 333741;
+  font-weight: bold;
 }
 
 .green {
@@ -28,6 +29,10 @@ body {
 
 .red {
   background: #D5574D;
+}
+
+.downbelow {
+  margin-top: 30vh;
 }
 
 #results {

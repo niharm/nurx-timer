@@ -3,13 +3,14 @@ const start = document.getElementById('start');
 const stop = document.getElementById('stop');
 const next = document.getElementById('next');
 const results = document.getElementById('results');
+const chimetest = document.getElementById('chimetest');
 
 // load sounds
 const chime = new Audio('sounds/chime.wav');
 const gong = new Audio('sounds/gong.wav');
 
-const WARNING_TIME_SECONDS = 30;
-const BUZZER_TIME_SECONDS = 45;
+const WARNING_TIME_SECONDS = 1;
+const FINAL_TIME_SECONDS = 6;
 
 // timeout
 let t;
@@ -21,7 +22,7 @@ function tick() {
 
 		if (seconds === WARNING_TIME_SECONDS) {
 			chime.play();
-		} else if (seconds === BUZZER_TIME_SECONDS) {
+		} else if (seconds === FINAL_TIME_SECONDS) {
 			gong.play();
 		}
 
@@ -46,6 +47,9 @@ function nextPerson() {
 	tick();
 }
 
+function playChime() {
+	chime.play();
+}
 
 /* Start button */
 start.onclick = tick;
@@ -55,3 +59,5 @@ stop.onclick = endCurrentTimer;
 
 /* next person */
 next.onclick = nextPerson;
+
+chimetest.onclick = playChime;
