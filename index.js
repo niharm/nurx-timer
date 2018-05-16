@@ -42,6 +42,7 @@ function endCurrentTimer() {
 
 function startTimer() {
 	seconds = 0;
+  time.textContent = "00";
 	t = setTimeout(tick, 1000);
 }
 
